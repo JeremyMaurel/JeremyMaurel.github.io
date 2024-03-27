@@ -1,30 +1,12 @@
-const button = document.querySelector("#button-menu");
-button.addEventListener("click", () => {
-  const menu = document.querySelector("#menu");
-  menu.classList.toggle("hidden");
-});
+listenClickOnMenuButton();
+listenClickOnNavItem();
+listenClickOnDownloadButton();
+listenScrollPage();
 
-const links = document.querySelectorAll(".nav-list__item");
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    console.log(link);
-    const menu = document.querySelector("#menu");
-    menu.classList.toggle("hidden");
-  });
-});
-
-let previousActiveNavItem;
-
-const downloadButton = document.querySelector("#download-button");
-downloadButton.addEventListener("click", downloadCV);
-
-document.addEventListener("DOMContentLoaded", setActiveLink);
-document.addEventListener("scroll", setActiveLink);
-
-document.querySelector(".contact__form").onsubmit = function () {
-  this.reset();
-};
-
+function listenClickOnDownloadButton() {
+  const downloadButton = document.querySelector("#download-button");
+  downloadButton.addEventListener("click", downloadCV);
+}
 function downloadCV() {
   const downloadLink = document.createElement("a");
   downloadLink.href = "./docs/CV_Maurel_Jeremy.pdf";
@@ -36,7 +18,27 @@ function downloadCV() {
 
   document.body.removeChild(downloadLink);
 }
+
+function listenClickOnMenuButton() {
+  const button = document.querySelector("#button-menu");
+  button.addEventListener("click", closeMenu);
+}
+function listenClickOnNavItem() {
+  const items = document.querySelectorAll(".nav-list__item a");
+  items.forEach((item) => {
+    item.addEventListener("click", closeMenu);
+  });
+}
+function closeMenu() {
+  const menu = document.querySelector("#menu");
+  menu.classList.toggle("hidden");
+}
+function listenScrollPage() {
+  document.addEventListener("scroll", setActiveLink);
+}
+
 function setActiveLink() {
+  let previousActiveNavItem;
   const sections = document.querySelectorAll("section");
 
   sections.forEach((section) => {
@@ -55,13 +57,12 @@ function setActiveLink() {
       navItem.classList.remove("current-section");
     }
   });
+}
+function isElementVisible(element) {
+  const rect = element.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  const midHeight = (rect.top + rect.bottom) / 2;
+  const visible = midHeight >= 0 && midHeight < windowHeight;
 
-  function isElementVisible(element) {
-    const rect = element.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-    const midHeight = (rect.top + rect.bottom) / 2;
-    const visible = midHeight >= 0 && midHeight < windowHeight;
-
-    return visible;
-  }
+  return visible;
 }

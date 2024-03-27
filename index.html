@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio développeur web jérémy maurel."
+    />
     <title>Portfolio de Jérémy Maurel | Développeur Web</title>
     <link
       rel="stylesheet"
@@ -36,7 +40,11 @@
           </li>
         </ul>
       </nav>
-      <button id="button-menu" class="icon site-header__button">
+      <button
+        id="button-menu"
+        class="icon site-header__button"
+        aria-labelledby="menu"
+      >
         <i style="color: rgba(21, 71, 52, 1)" class="fa-solid fa-bars"></i>
       </button>
     </header>
@@ -126,7 +134,7 @@
           />
         </div>
         <div class="about__resume">
-          <h2 class="resume-title">ACCÈDER À MON CV</h2>
+          <h3 class="resume-title">ACCÈDER À MON CV</h3>
           <p class="resume-description">
             Je vous remercie de visiter mon portfolio. Pour obtenir davantage
             d'informations sur mon parcours professionnel, mes compétences et
@@ -142,7 +150,7 @@
         </div>
       </section>
       <section id="skills" class="skills">
-        <h2 class="skills__title">LANGAGES ET OUTILS</h2>
+        <h3 class="skills__title">LANGAGES ET OUTILS</h3>
         <div class="skills__container">
           <div class="skill-infos">
             <img class="skill-logo" src="./docs/img/icones/html5.webp" alt="" />
@@ -156,7 +164,7 @@
             <img
               class="skill-logo"
               src="./docs/img/icones/javascript.webp"
-              alt=""
+              alt="Logi de JavaScript"
             />
             <h4 class="skill-title">JavaScript</h4>
           </div>
@@ -239,7 +247,7 @@
         </div>
       </section>
       <section id="projects" class="projects">
-        <h2 class="projects__title">MES PROJETS [Work In Progress]</h2>
+        <h3 class="projects__title">MES PROJETS [Work In Progress]</h3>
         <div class="projects__container">
           <div class="project">
             <img class="project__img" src="./docs/img/wip.webp" alt="" />
@@ -264,8 +272,12 @@
         </div>
       </section>
       <section id="contact" class="contact">
-        <h2 class="contact__title">CONTACTEZ-MOI</h2>
-        <form action="https://formspree.io/f/mpzvjbaz" class="contact__form">
+        <h3 class="contact__title">CONTACTEZ-MOI</h3>
+        <form
+          action="https://formspree.io/f/mpzvjbaz"
+          class="contact__form"
+          method="POST"
+        >
           <fieldset class="form-fieldset">
             <div class="fieldset__details">
               <label for="name" class="fieldset__label">Nom</label>
