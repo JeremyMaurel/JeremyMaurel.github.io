@@ -41,6 +41,10 @@
   line-height: 1rem;
 }
 
+.nav-list__item a {
+  color: var(--main-color);
+}
+
 .home {
   background-image: url("../docs/img/background.jpg");
   background-repeat: no-repeat;
@@ -236,7 +240,7 @@
 .project__img {
   display: block;
   border-radius: 0.5rem;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -252,7 +256,7 @@
   color: white;
   text-align: justify;
   padding-bottom: 8rem;
-  width: 50%;
+  width: 90%;
   display: block;
   margin: 0 auto;
 }
@@ -479,7 +483,7 @@
   }
   .project__img {
     margin: 0 auto;
-    width: 70%;
+    width: 50%;
   }
   .project__description {
     margin: 0;
