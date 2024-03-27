@@ -131,6 +131,7 @@
 .about__resume {
   background-color: var(--main-color);
   text-align: center;
+  padding: 5rem 0;
 }
 
 .resume-title {
@@ -143,8 +144,8 @@
 .resume-description {
   color: white;
   padding: var(--margin-padding-base);
-  font-size: 1.5rem;
-  margin: 0 20rem;
+  font-size: 1.25rem;
+  margin: 0 2rem;
 }
 .resume-button {
   font-size: 1.25rem;
@@ -154,7 +155,7 @@
   border-radius: 0.25rem;
   padding: 0.75rem 1rem;
   border: 2px solid var(--main-color);
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 
 .resume-icon {
@@ -166,10 +167,9 @@
 .resume-button:hover {
   background-color: var(--main-color);
   color: white;
-  border: 1px solid white;
+  border: 2px solid white;
   cursor: pointer;
-  padding: 1.25rem 1.5rem;
-  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .resume-button:hover .resume-icon {
@@ -177,7 +177,7 @@
 }
 
 .skills {
-  background-color: rgb(200, 200, 200);
+  background-color: white;
   padding-bottom: var(--margin-padding-base);
 }
 
@@ -206,7 +206,7 @@
 
 .skill-logo {
   display: block;
-  margin: 0 auto;
+  margin: 1rem;
 }
 .skill-title {
   color: var(--main-color);
@@ -286,6 +286,7 @@
   margin-bottom: 0.5rem;
   border-radius: 0.25rem;
   padding: 0.25rem;
+  padding: 1rem;
 }
 
 .fieldset__textarea {
@@ -448,18 +449,18 @@
     padding-top: 2rem;
   }
   .skills {
-    padding: 0rem 15% 8rem 15%;
+    padding: 0rem 10% 8rem 10%;
   }
   .skill-infos {
-    width: 25%;
-    margin-bottom: 2rem;
-  }
-  .about__resume {
-    padding: 5rem 0;
+    margin: 2rem;
   }
 
   .contact {
     height: calc(100vh - 2rem);
+  }
+
+  .resume-description {
+    margin: 0 20rem;
   }
 
   .current-section {
@@ -477,8 +478,8 @@
     margin: 0;
   }
   .project__img {
-    margin: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 70%;
   }
   .project__description {
     margin: 0;

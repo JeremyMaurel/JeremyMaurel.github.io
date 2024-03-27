@@ -4,6 +4,15 @@ button.addEventListener("click", () => {
   menu.classList.toggle("hidden");
 });
 
+const links = document.querySelectorAll(".nav-list__item");
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    console.log(link);
+    const menu = document.querySelector("#menu");
+    menu.classList.toggle("hidden");
+  });
+});
+
 let previousActiveNavItem;
 
 const downloadButton = document.querySelector("#download-button");
