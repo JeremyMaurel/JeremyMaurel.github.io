@@ -46,7 +46,7 @@
 }
 
 .home {
-  background-image: url("../docs/img/background.jpg");
+  background-image: url("../docs/img/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -376,10 +376,8 @@
   }
 
   .about__img {
-    width: 30%;
-    height: auto;
-    align-self: center;
-    margin: 0;
+    width: 40%;
+    margin: 7rem 0 7rem;
   }
 
   .site-header__button {
