@@ -242,6 +242,7 @@
   border-radius: 0.5rem;
   width: 100%;
   margin: 0 auto;
+  width: 90%;
 }
 
 .project__title {
@@ -377,7 +378,7 @@
 
   .about__img {
     width: 40%;
-    margin: 7rem 0 7rem;
+    margin: auto 0;
   }
 
   .site-header__button {
@@ -479,10 +480,7 @@
     width: 40%;
     margin: 0;
   }
-  .project__img {
-    margin: 0 auto;
-    width: 50%;
-  }
+ 
   .project__description {
     margin: 0;
     width: 100%;
@@ -496,7 +494,8 @@
   .form-button {
     width: 49.25%;
     display: block;
-    margin: 2rem auto;
-    padding: 2rem;
+    margin:  auto;
+    padding: 1rem;
+
   }
 }
